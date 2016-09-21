@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <title>Product Page</title>
+</head>
+<body>
+    <div class="loader">
+      <div class = "slow-connection text-center"> Looks like the data is still loading. Hang in there! </div>
+    </div>
+    <div class = "solid-color"></div>
+    <div class="filter-trigger">
+      <img src="filter.png">
+    </div>
+    <div class = "wrapper clearfix">
+      <div class = "option-listing">
+        <div class = "heading">
+          Filter By
+        </div>
+        <div class = "category-listing">
+          <div class = "category">
+            <div class = "heading"> Category </div>
+          </div>
+          <div class = "category-container">
+
+          </div>
+        </div>
+        <div class = "apply-button">Apply</div>
+      </div>
+      <div class = "product-listing">
+        <div class = "heading-sort-container clearfix">
+          <div class = "heading">
+            Products
+          </div>
+          <div class="sort-container">
+            <select id="sort" name="sort">
+              <option selected="selected">Sort By</option>
+              <option data-attr="price-asc"> Price: Low to High </option>
+              <option data-attr="price-des"> Price: High to Low </option>
+              <option data-attr="score-asc"> Score: Low to High </option>
+              <option data-attr="score-des"> Score: High to Low </option>
+            </select>
+          </div>
+        </div>
+        <div class = "product-container">
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+      setTimeout(function(){
+         $('.slow-connection').show();
+      }, 8000);
+      $(".filter-trigger").on('click', function(){
+        $(".option-listing").addClass("show");
+      });
+      $(".apply-button").on("click", function(){
+        $(".option-listing").removeClass("show");
+        $('body').scrollTop(0);
+      });
+    </script>
+</body>
+</html>

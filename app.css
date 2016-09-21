@@ -156,7 +156,7 @@ body{
   float: left;
 }
 .slow-connection{
-  margin-top:50px; 
+  margin-top:50px;
   font-size:20px;
   display: none;
 }
@@ -221,28 +221,10 @@ body{
       transform:translateY(0px);
     }
 }
-@media only screen and (min-device-width : 240px) and (max-device-width : 768px) {
-  .wrapper{
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: -140px;
-  }
-  .wrapper > div{
-    width: 100%;
-  }
-  .product{
-    /* uncomment line 237 and comment line 238 if you want 3 products
-    in the same row :/ */
-    /*width: calc(33% - 10px);*/
-    width: 100%;
-    margin: 5px 5px 5px 0;
+@media only screen and (min-device-width : 240px) and (max-device-width : 480px), only screen and (min-device-width : 481px) and (max-device-width : 768px) {
+  .category-listing, .product-listing{
     -webkit-animation-iteration-count: 0;
             animation-iteration-count: 0;
-  }
-  .category-listing{
-    -webkit-animation-iteration-count: 0;
-            animation-iteration-count: 0; 
   }
   .option-listing {
       background: #eeeeee none repeat scroll 0 0;
@@ -277,25 +259,75 @@ body{
     float: none;
   }
 }
-@media only screen and (min-device-width : 480px) and (max-device-width : 768px) {
-  div.product{
+@media only screen and (min-device-width : 240px) and (max-device-width : 480px) {
+	.wrapper, .product-listing{
+		width: 100%;
+		padding:0;
+	}
+	.heading-sort-container.clearfix {
+	    margin-bottom: 20px;
+	}
+	.product-container {
+	    margin-left: 0;
+	}
+	.product {
+	    animation-iteration-count: 0;
+	    margin: 0;
+	    width: calc(33% + 1px);
+			border: 1px solid #ddd;
+	}
+	.wrapper > div.product-listing{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.product-image-container{
+		min-height: 130px;
+	}
+	.product-image{
+		max-height: 130px;
+	}
+	.product-category{
+		font-size: 10px;
+	}
+	.product-meta{
+		font-size: 12px;
+	}
+	.product-name{
+		font-size: 18px;
+	}
+}
+@media only screen and (min-width : 481px) and (max-width : 768px) {
+	.wrapper{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -140px;
+  }
+  .wrapper > div{
+    width: 100%;
+  }
+  .product{
     width: calc(33% - 15px);
     margin: 15px 15px 15px 0;
   }
-  div.product-container{
+  .product-container{
     margin-left: 0;
   }
+	.wrapper > div.product-listing{
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
-@media only screen and (min-device-width : 769px) and (max-device-width : 1200px) {
+@media only screen and (min-width : 769px) and (max-width : 1200px) {
   .wrapper{
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
   }
   .product-image-container{
-    min-height: 130px;
+    min-height: 170px;
   }
   .product-image{
-    max-height: 130px;
+    max-height: 170px;
   }
 }

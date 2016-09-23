@@ -49,6 +49,12 @@ body{
   padding-left: 15px;
   padding-right: 15px;
 }
+.score{
+  float: right;
+}
+.price{
+  float: left;
+}
 .text-muted{
   color: #666;
 }
@@ -70,7 +76,7 @@ body{
   float: left;
 }
 .product-container{
-  margin-left: -15px;
+  margin-top: 15px;
 }
 .heading{
   font-size: 30px;
@@ -80,6 +86,7 @@ body{
     margin-top: 15px;
     background: white;
     padding: 15px;
+    border: 1px solid #ddd;
     min-height: 250px;
     padding-top: 10px;
     -webkit-animation-duration: 0.75s;
@@ -108,29 +115,27 @@ body{
     font-weight: normal;
     margin-bottom: 0px;
 }
-.product{
-  width: calc(33% - 30px);
-  margin: 15px;
-  padding:10px;
-  background: white;
-  float: left;
-  -webkit-animation-duration: 0.75s;
+.product {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #dddddd;
+    float: left;
+    padding: 10px;
+    width: 33%;
+    -webkit-animation-duration: 0.75s;
           animation-duration: 0.75s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-name: slideIn;
-          animation-name: slideIn;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-name: slideIn;
+            animation-name: slideIn;
 }
 .product-image {
-    max-height: 200px;
+    max-height: 130px;
     max-width: 100%;
 }
-.product-image-container{
-  background: url('blurredImage.jpg');
-  background-size:cover;
-  background-repeat: no-repeat;
-  min-height: 200px;
-  margin-bottom: 10px;
+.product-image-container {
+    background: rgba(0, 0, 0, 0) url("blurredImage.jpg") no-repeat scroll 0 0 / cover ;
+    margin-bottom: 10px;
+    min-height: 130px;
 }
 .product-category{
   font-size: 14px;
@@ -149,7 +154,7 @@ body{
 }
 .sort-container {
     float: right;
-    margin-right: 20px;
+    margin-right: 5px;
     margin-top: 5px;
 }
 .heading-sort-container > .heading{
@@ -248,6 +253,9 @@ body{
   .option-listing{
     margin-bottom: 30px;
   }
+  .score, .price{
+    float: none;
+  }
 }
 @media only screen and (min-width : 240px) and (max-width : 480px) {
 	.wrapper, .product-listing{
@@ -311,10 +319,6 @@ body{
   .wrapper > div{
     width: 100%;
   }
-  .product{
-    width: calc(33% - 15px);
-    margin: 15px 15px 15px 0;
-  }
   .product-container{
     margin-left: 0;
   }
@@ -339,6 +343,8 @@ body{
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
   .product-image-container{
     min-height: 170px;
   }
